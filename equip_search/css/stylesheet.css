@@ -1,0 +1,12 @@
+/************************************
+** 全体
+************************************/
+body {
+	width: 50%;
+	margin: 0 auto;
+}
+
+th {
+	background-color: #C0C0C0;
+	border: 1px solid black;
+}

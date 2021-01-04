@@ -6,7 +6,54 @@ body {
 	margin: 0 auto;
 }
 
-th {
+.equip_th {
 	background-color: #C0C0C0;
 	border: 1px solid black;
+}
+
+.equip_td {
+	height: 30px;
+	text-align: center;
+	font-weight: bold;
+}
+
+.equip_img {
+	width:100%;
+	max-width: 100%;
+	margin: 0 auto;
+	height: auto;
+}
+
+.unit_td {
+	text-align: center;
+	font-weight: bold;
+}
+
+.unit_img {
+	width: 96px;
+	height: 96px;
+	margin: 0 auto;
+}
+
+.unit_name {
+	display: block;
+}
+
+.select_label {
+	cursor: pointer;
+	padding: 5px;
+	border: 1px solid #434343;
+	border-radius: 5px;
+}
+
+.select_equip {
+	display: none;
+}
+
+.select_equip:checked + .select_label {
+	background-color: #6ca0ce;
+}
+
+.err_msg {
+	color: red;
 }

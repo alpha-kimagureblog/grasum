@@ -1,17 +1,61 @@
 <!DOCTYPE html>
 <html lang="jp">
-	<head>
-		<meta charset="utf-8">
-		<title>装備枠検索</title>
-		<link rel="stylesheet" type="text/css" href="./css/stylesheet.css">
-		<link rel="stylesheet" type="text/css" href="./css/responsive.css">
-		<script src="./js/equipment.js" type="module"></script>
-	</head>
-	<body>
-		<input type="button" value="ユニットを表示" onclick="unitList()">
-		<table style="font-size: 10pt; font-weight: 500; border-collapse: collapse; width: 100%;" border="1">
-			<tbody id="unit">
+<head>
+	<meta charset="utf-8">
+	<title>装備枠検索</title>
+	<link rel="stylesheet" type="text/css" href="./css/stylesheet.css">
+	<link rel="stylesheet" type="text/css" href="./css/responsive.css">
+	<script src="./js/unitequip.js"></script>
+</head>
+<body>
+	<form id="equip">
+		<table style="border-collapse: collapse; width: 100%;" border="1">
+			<tbody>
+				<tr>
+					<th class="equip_th">種類</th>
+					<th class="equip_th">★5</th>
+					<th class="equip_th">★4</th>
+					<th class="equip_th">★3</th>
+				</tr>
+				<tr>
+					<td class="equip_td">物理</td>
+					<td class="equip_td"><input type="checkbox" class="select_equip" id="physics5" onClick="selectEquipList()"/><label class="select_label" for="physics5">選択</label></td>
+					<td class="equip_td"><input type="checkbox" class="select_equip" id="physics4" onClick="selectEquipList()"/><label class="select_label" for="physics4">選択</label></td>
+					<td class="equip_td"><input type="checkbox" class="select_equip" id="physics3" onClick="selectEquipList()"/><label class="select_label" for="physics3">選択</label></td>
+				</tr>
+				<tr>
+					<td class="equip_td">魔法</td>
+					<td class="equip_td"><input type="checkbox" class="select_equip" id="magic5" onClick="selectEquipList()"/><label class="select_label" for="magic5">選択</label></td>
+					<td class="equip_td"><input type="checkbox" class="select_equip" id="magic4" onClick="selectEquipList()"/><label class="select_label" for="magic4">選択</label></td>
+					<td class="equip_td"><input type="checkbox" class="select_equip" id="magic3" onClick="selectEquipList()"/><label class="select_label" for="magic3">選択</label></td>
+				</tr>
+				<tr>
+					<td class="equip_td">防御</td>
+					<td class="equip_td"><input type="checkbox" class="select_equip" id="defense5" onClick="selectEquipList()"/><label class="select_label" for="defense5">選択</label></td>
+					<td class="equip_td"><input type="checkbox" class="select_equip" id="defense4" onClick="selectEquipList()"/><label class="select_label" for="defense4">選択</label></td>
+					<td class="equip_td"><input type="checkbox" class="select_equip" id="defense3" onClick="selectEquipList()"/><label class="select_label" for="defense3">選択</label></td>
+				</tr>
+				<tr>
+					<td class="equip_td">回復</td>
+					<td class="equip_td"><input type="checkbox" class="select_equip" id="heel5" onClick="selectEquipList()"/><label class="select_label" for="heel5">選択</label></td>
+					<td class="equip_td"><input type="checkbox" class="select_equip" id="heel4" onClick="selectEquipList()"/><label class="select_label" for="heel4">選択</label></td>
+					<td class="equip_td"><input type="checkbox" class="select_equip" id="heel3" onClick="selectEquipList()"/><label class="select_label" for="heel3">選択</label></td>
+				</tr>
+				<tr>
+					<td class="equip_td">援護</td>
+					<td class="equip_td"><input type="checkbox" class="select_equip" id="support5" onClick="selectEquipList()"/><label class="select_label" for="support5">選択</label></td>
+					<td class="equip_td"><input type="checkbox" class="select_equip" id="support4" onClick="selectEquipList()"/><label class="select_label" for="support4">選択</label></td>
+					<td class="equip_td"><input type="checkbox" class="select_equip" id="support3" onClick="selectEquipList()"/><label class="select_label" for="support3">選択</label></td>
+				</tr>
 			</tbody>
 		</table>
-	</body>
+	</form>
+	<span class="err_msg" id="err_msg"></span>
+	<br>
+	<br>
+	<table style="border-collapse: collapse; width: 100%;" border="1">
+		<tbody id="unit">
+		</tbody>
+	</table>
+</body>
 </html>

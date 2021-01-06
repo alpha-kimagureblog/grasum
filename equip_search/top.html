@@ -2,12 +2,17 @@
 <html lang="jp">
 <head>
 	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 	<title>装備枠検索</title>
 	<link rel="stylesheet" type="text/css" href="./css/stylesheet.css">
 	<link rel="stylesheet" type="text/css" href="./css/responsive.css">
 	<script src="./js/unitequip.js"></script>
 </head>
 <body>
+	<h2>装備枠検索</h2>
+	<p>検索したい装備枠を選択してください</p>
+	<p>(※選択は3つまで)</p>
+	<!-- formで囲って全てのidを取得できるようにする -->
 	<form id="equip">
 		<table style="border-collapse: collapse; width: 100%;" border="1">
 			<tbody>
@@ -50,11 +55,90 @@
 			</tbody>
 		</table>
 	</form>
+	<!-- エラーメッセージ出力場所 -->
 	<span class="err_msg" id="err_msg"></span>
 	<br>
-	<br>
+	<p>選択ボタンを押すとパーティに加えることができます。</p>
+	<a href="#party">パーティを確認する</a>
+	<h3>炎属性</h3>
 	<table style="border-collapse: collapse; width: 100%;" border="1">
-		<tbody id="unit">
+		<!-- ヘッダー部分は同じtbody内に記述すると、ユニット出力時に消えてしまうため、別のtbodyで作成 -->
+		<tbody>
+			<tr>
+				<th class="equip_th" style="width: 19%;">ユニット</th>
+				<th class="equip_th" style="width: 27%;">装備枠1</th>
+				<th class="equip_th" style="width: 27%;">装備枠2</th>
+				<th class="equip_th" style="width: 27%;">装備枠3</th>
+			</tr>
+		</tbody>
+		<!-- tbodyに各属性のidを設定し、属性別で出力されるようにする -->
+		<tbody id="flame">
+		</tbody>
+	</table>
+	<h3>水属性</h3>
+	<table style="border-collapse: collapse; width: 100%;" border="1">
+		<tbody>
+			<tr>
+				<th class="equip_th" style="width: 19%;">ユニット</th>
+				<th class="equip_th" style="width: 27%;">装備枠1</th>
+				<th class="equip_th" style="width: 27%;">装備枠2</th>
+				<th class="equip_th" style="width: 27%;">装備枠3</th>
+			</tr>
+		</tbody>
+		<tbody id="water">
+		</tbody>
+	</table>
+	<h3>樹属性</h3>
+	<table style="border-collapse: collapse; width: 100%;" border="1">
+		<tbody>
+			<tr>
+				<th class="equip_th" style="width: 19%;">ユニット</th>
+				<th class="equip_th" style="width: 27%;">装備枠1</th>
+				<th class="equip_th" style="width: 27%;">装備枠2</th>
+				<th class="equip_th" style="width: 27%;">装備枠3</th>
+			</tr>
+		</tbody>
+		<tbody id="wood">
+		</tbody>
+	</table>
+	<h3>光属性</h3>
+	<table style="border-collapse: collapse; width: 100%;" border="1">
+		<tbody>
+			<tr>
+				<th class="equip_th" style="width: 19%;">ユニット</th>
+				<th class="equip_th" style="width: 27%;">装備枠1</th>
+				<th class="equip_th" style="width: 27%;">装備枠2</th>
+				<th class="equip_th" style="width: 27%;">装備枠3</th>
+			</tr>
+		</tbody>
+		<tbody id="shine">
+		</tbody>
+	</table>
+	<h3>闇属性</h3>
+	<table style="border-collapse: collapse; width: 100%;" border="1">
+		<tbody>
+			<tr>
+				<th class="equip_th" style="width: 19%;">ユニット</th>
+				<th class="equip_th" style="width: 27%;">装備枠1</th>
+				<th class="equip_th" style="width: 27%;">装備枠2</th>
+				<th class="equip_th" style="width: 27%;">装備枠3</th>
+			</tr>
+		</tbody>
+		<tbody id="dark">
+		</tbody>
+	</table>
+	<h2>パーティ</h2>
+	<table style="border-collapse: collapse; width: 100%;" border="1">
+		<tbody>
+			<tr>
+				<th class="equip_th" style="width: 19%;">ユニット</th>
+				<th class="equip_th" style="width: 27%;">装備枠1</th>
+				<th class="equip_th" style="width: 27%;">装備枠2</th>
+				<th class="equip_th" style="width: 27%;">装備枠3</th>
+			</tr>
+		</tbody>
+		<!-- パーティ出力用のtbody -->
+		<tbody id="party">
 		</tbody>
 	</table>
 </body>

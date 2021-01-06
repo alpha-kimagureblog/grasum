@@ -1,0 +1,37 @@
+/************************************
+** タブレット用
+************************************/
+@media (max-width: 1000px) {
+	body {
+		width: 75%;
+	}
+
+	.equip_td {
+		height: 50px;
+	}
+
+	.select_label {
+		padding: 10px;
+	}
+}
+
+/************************************
+** スマホ用
+************************************/
+@media (max-width: 670px) {
+	body {
+		width: 95%;
+	}
+
+	.equip_td {
+		height: 70px;
+	}
+
+	.unit_td {
+		height: 50px;
+	}
+
+	.select_label {
+		padding: 15px;
+	}
+}
